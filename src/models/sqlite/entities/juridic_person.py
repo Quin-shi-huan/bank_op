@@ -2,7 +2,7 @@ from sqlalchemy import Column, REAL, BIGINT, String, INTEGER
 from src.models.sqlite.settings.base import Base
 
 
-class JuridicPerson(Base):
+class JuridicPersonTable(Base): # pylint: disable=too-few-public-methods
     __tablename__ = "pessoa_juridica"
     id = Column(BIGINT, primary_key=True, autoincrement=True)
     faturamento = Column(REAL, nullable=False)

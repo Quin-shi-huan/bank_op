@@ -2,7 +2,7 @@ from sqlalchemy import Column, REAL, BIGINT, String, INTEGER
 from src.models.sqlite.settings.base import Base
 
 
-class FisicPerson(Base):
+class FisicPersonTable(Base): # pylint: disable=too-few-public-methods
     __tablename__ = "pessoa_fisica"
     id = Column(BIGINT, primary_key=True, autoincrement=True)
     renda_mensal = Column(REAL, nullable=False)
