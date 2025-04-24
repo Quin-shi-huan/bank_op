@@ -7,9 +7,9 @@ class FisicPersonTable(Base): # pylint: disable=too-few-public-methods
     id = Column(BIGINT, primary_key=True, autoincrement=True)
     renda_mensal = Column(REAL, nullable=False)
     idade = Column(INTEGER, nullable=False)
-    nome_fantasia = Column(String, nullable=False)
+    nome_completo = Column(String, nullable=False)
     celular = Column(String, nullable=True)
-    email_corporativo = Column(String, nullable=False)
+    email = Column(String, nullable=False)
     categoria = Column(String, nullable=False)
     saldo = Column(REAL, nullable=False)
 
