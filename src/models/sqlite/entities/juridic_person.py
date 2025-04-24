@@ -14,4 +14,12 @@ class JuridicPersonTable(Base): # pylint: disable=too-few-public-methods
     saldo = Column(REAL, nullable=False)
 
     def __repr__(self):
-        return f"Fisic Person [name={self.nome_completo}, idade={self.idade}, email={self.email}]"
+        return (
+            f"Faturamento={self.faturamento},\n"
+            f"Idade={self.idade},\n"
+            f"Nome={self.nome_fantasia},\n"
+            f"Tel={self.celular},\n"
+            f"Email={self.email_corporativo},\n"
+            f"Categoria={self.categoria},\n"
+            f"Saldo={self.saldo}"
+        )
