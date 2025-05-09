@@ -1,8 +1,8 @@
 from typing import Dict
 import re
 from src.models.sqlite.interfaces.juridic_person_repository import JuridicPersonRepositoryInterface
-from .interfaces.person_creator_controller import PersonCreatorControllerInterface
 from src.errors.error_type.http_bad_request import HttpBadRequest
+from .interfaces.person_creator_controller import PersonCreatorControllerInterface
 class JuridicPersonCreatorController(PersonCreatorControllerInterface):
     def __init__(self, juridic_person_repository: JuridicPersonRepositoryInterface):
         self.__juridic_person_repository = juridic_person_repository

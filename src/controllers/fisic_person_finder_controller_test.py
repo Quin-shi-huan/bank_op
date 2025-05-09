@@ -2,13 +2,13 @@ from unittest.mock import MagicMock
 import pytest
 from src.controllers.fisic_person_finder_controller import FisicPersonFinderController
 from src.models.sqlite.entities.fisic_person import FisicPersonTable
-
+from src.errors.error_type.http_not_found import HttpNotFoundError
 
 def test_find_person_success():
     fake_person = FisicPersonTable(
         renda_mensal=5000.0,
         idade=30,
-        nome_completo="João da Silva",
+        nome_completo="João",
         celular="11999999999",
         email="joao@email.com",
         categoria="Premium",
@@ -26,7 +26,7 @@ def test_find_person_success():
     assert result["data"]["count"] == 1
     assert result["data"]["attributes"]["renda_mensal"] == 5000.0
     assert result["data"]["attributes"]["idade"] == 30
-    assert result["data"]["attributes"]["nome_completo"] == "João da Silva"
+    assert result["data"]["attributes"]["nome_completo"] == "João"
     assert result["data"]["attributes"]["celular"] == "11999999999"
     assert result["data"]["attributes"]["email"] == "joao@email.com"
     assert result["data"]["attributes"]["categoria"] == "Premium"
@@ -41,5 +41,5 @@ def test_find_person_not_found():
 
     controller = FisicPersonFinderController(repository_mock)
 
-    with pytest.raises(ValueError, match="Fisic person not found!"):
+    with pytest.raises(HttpNotFoundError, match="Fisic person not found!"):
         controller.find(999)

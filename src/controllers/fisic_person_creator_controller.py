@@ -27,7 +27,7 @@ class FisicPersonCreatorController(PersonCreatorControllerInterface):
         return formated_response
 
     def __validate_nome_completo(self, nome_completo: str) -> None:
-        non_valid_characters = re.compile(r'[^a-zA-Z-\s]')
+        non_valid_characters = re.compile(r'[^a-zA-Z]')
 
         if non_valid_characters.search(nome_completo):
             raise HttpBadRequest("Nome de pessoa inválido!")

@@ -2,7 +2,7 @@ from unittest.mock import MagicMock
 import pytest
 from src.controllers.juridic_person_finder_controller import JuridicPersonFinderController
 from src.models.sqlite.entities.juridic_person import JuridicPersonTable
-
+from src.errors.error_type.http_not_found import HttpNotFoundError
 
 def test_find_person_success():
     fake_person = JuridicPersonTable(
@@ -41,5 +41,5 @@ def test_find_person_not_found():
 
     controller = JuridicPersonFinderController(repository_mock)
 
-    with pytest.raises(ValueError, match="Juridic person not found"):
+    with pytest.raises(HttpNotFoundError, match="Juridic person not found!"):
         controller.find(999)

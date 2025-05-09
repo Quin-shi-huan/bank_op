@@ -10,7 +10,7 @@ def test_create():
     person_info = {
         "faturamento": 5000.0,
         "idade": 30,
-        "nome_fantasia": "Julius Ceasar",
+        "nome_fantasia": "Julius",
         "celular": "119966004400",
         "email_corporativo": "juliusCeasar@mail.com",
         "categoria": "C",
@@ -27,7 +27,7 @@ def test_create_error():
     person_info = {
         "faturamento": 5000.0,
         "idade": 30,
-        "nome_fantasia": "Julius Ceasar123",
+        "nome_fantasia": "Julius123",
         "celular": "1122334455",
         "email_corporativo": "juliusCeasar@mail.com",
         "categoria": "C",

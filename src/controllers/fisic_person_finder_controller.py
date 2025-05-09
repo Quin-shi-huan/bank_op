@@ -1,8 +1,8 @@
 from typing import Dict
 from src.models.sqlite.entities.fisic_person import FisicPersonTable
 from src.models.sqlite.interfaces.fisic_person_repository import FisicPersonRepositoryInterface
-from .interfaces.person_finder_controller import PersonFinderControllerInterface
 from src.errors.error_type.http_not_found import HttpNotFoundError
+from .interfaces.person_finder_controller import PersonFinderControllerInterface
 
 class FisicPersonFinderController(PersonFinderControllerInterface):
     def __init__(self, fisic_person_repository: FisicPersonRepositoryInterface):
@@ -16,7 +16,7 @@ class FisicPersonFinderController(PersonFinderControllerInterface):
     def __find_person_in_db(self, person_id: int) -> FisicPersonTable:
         person = self.__fisic_person_repository.get_person(person_id)
         if not person:
-            raise HttpNotFoundError("Pessoa não encontrada!")
+            raise HttpNotFoundError("Fisic person not found!")
 
         return person
 
