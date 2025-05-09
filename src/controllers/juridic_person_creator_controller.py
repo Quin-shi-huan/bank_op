@@ -2,7 +2,7 @@ from typing import Dict
 import re
 from src.models.sqlite.interfaces.juridic_person_repository import JuridicPersonRepositoryInterface
 from .interfaces.person_creator_controller import PersonCreatorControllerInterface
-
+from src.errors.error_type.http_bad_request import HttpBadRequest
 class JuridicPersonCreatorController(PersonCreatorControllerInterface):
     def __init__(self, juridic_person_repository: JuridicPersonRepositoryInterface):
         self.__juridic_person_repository = juridic_person_repository
@@ -29,7 +29,7 @@ class JuridicPersonCreatorController(PersonCreatorControllerInterface):
         non_valid_characters = re.compile(r'[^a-zA-Z-\s]')
 
         if non_valid_characters.search(nome_fantasia):
-            raise ValueError("Invalid Character!")
+            raise HttpBadRequest("Invalid Character!")
 
     def __insert_person_in_db(
         self, faturamento: float, idade: int, nome_fantasia: str,

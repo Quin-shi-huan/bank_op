@@ -1,6 +1,7 @@
 from typing import Dict
 from src.models.sqlite.entities.juridic_person import JuridicPersonTable
 from src.models.sqlite.interfaces.juridic_person_repository import JuridicPersonRepositoryInterface
+from src.errors.error_type.http_not_found import HttpNotFoundError
 from .interfaces.person_finder_controller import PersonFinderControllerInterface
 
 class JuridicPersonFinderController(PersonFinderControllerInterface):
@@ -15,7 +16,7 @@ class JuridicPersonFinderController(PersonFinderControllerInterface):
     def __find_person_in_db(self, person_id: int) -> JuridicPersonTable:
         person = self.__juridic_person_repository.get_person(person_id)
         if not person:
-            raise ValueError("Juridic person not found!")
+            raise HttpNotFoundError("Juridic person not found!")
 
         return person
 
