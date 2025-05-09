@@ -3,7 +3,7 @@ import re
 from src.models.sqlite.interfaces.fisic_person_repository import FisicPersonRepositoryInterface
 from .interfaces.person_creator_controller import PersonCreatorControllerInterface
 
-class PersonCreatorController(PersonCreatorControllerInterface):
+class FisicPersonCreatorController(PersonCreatorControllerInterface):
     def __init__(self, fisic_person_repository: FisicPersonRepositoryInterface):
         self.__fisic_person_repository = fisic_person_repository
 

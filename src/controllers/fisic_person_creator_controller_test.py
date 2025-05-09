@@ -1,5 +1,5 @@
 import pytest
-from .fisic_person_creator_controller import PersonCreatorController
+from .fisic_person_creator_controller import FisicPersonCreatorController
 
 class MockFisicPersonRepository:
     def insert_person(
@@ -16,7 +16,7 @@ def test_create():
         "categoria": "C",
         "saldo": 1200.0
     }
-    controller = PersonCreatorController(MockFisicPersonRepository())
+    controller = FisicPersonCreatorController(MockFisicPersonRepository())
     response = controller.create(person_info)
 
     assert response["data"]["type"] == "Fisic Person"
@@ -34,7 +34,7 @@ def test_create_error():
         "saldo": 1200.0
     }
 
-    controller = PersonCreatorController(MockFisicPersonRepository())
+    controller = FisicPersonCreatorController(MockFisicPersonRepository())
 
     with pytest.raises(Exception):
         controller.create(person_info)
