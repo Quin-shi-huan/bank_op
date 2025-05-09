@@ -1,10 +1,10 @@
 from .http_types.http_request import HttpRequest
 from .http_types.http_response import HttpResponse
-from ..controllers.fisic_person_creator_controller import FisicPersonCreatorController
+from ..controllers.juridic_person_creator_controller import JuridicPersonCreatorController
 from .interfaces.view_interface import ViewInterface
 
-class FisicPersonCreatorView(ViewInterface):
-    def __init__(self, controller: FisicPersonCreatorController) -> None:
+class JuridicPersonCreatorView(ViewInterface):
+    def __init__(self, controller: JuridicPersonCreatorController) -> None:
         self.__controller = controller
 
     def handle(self, http_request: HttpRequest) -> HttpResponse:
