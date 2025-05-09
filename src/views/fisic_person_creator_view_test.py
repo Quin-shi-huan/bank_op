@@ -7,23 +7,23 @@ from src.views.http_types.http_response import HttpResponse
 
 def test_fisic_person_creator_view():
     fake_person_info = {
-        "nome_completo": "João da Silva",
-        "idade": 30,
-        "email": "joao@email.com",
-        "celular": "11999999999",
-        "categoria": "C",
         "renda_mensal": 5000.0,
+        "idade": 30,
+        "nome_completo": "João da Silva",
+        "celular": "11999999999",
+        "email": "joao@email.com",
+        "categoria": "Premium",
         "saldo": 2000.0
     }
 
     expected_response = {
         "id": 1, 
-        "nome_completo": "João da Silva",
-        "idade": 30,
-        "email": "joao@email.com",
-        "celular": "11999999999",
-        "categoria": "C",
         "renda_mensal": 5000.0,
+        "idade": 30,
+        "nome_completo": "João da Silva",
+        "celular": "11999999999",
+        "email": "joao@email.com",
+        "categoria": "Premium",
         "saldo": 2000.0
         }
 
