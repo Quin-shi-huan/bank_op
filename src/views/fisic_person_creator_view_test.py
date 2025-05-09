@@ -9,7 +9,7 @@ def test_fisic_person_creator_view():
     fake_person_info = {
         "renda_mensal": 5000.0,
         "idade": 30,
-        "nome_completo": "João da Silva",
+        "nome_completo": "João",
         "celular": "11999999999",
         "email": "joao@email.com",
         "categoria": "Premium",
@@ -20,7 +20,7 @@ def test_fisic_person_creator_view():
         "id": 1, 
         "renda_mensal": 5000.0,
         "idade": 30,
-        "nome_completo": "João da Silva",
+        "nome_completo": "João",
         "celular": "11999999999",
         "email": "joao@email.com",
         "categoria": "Premium",

@@ -9,7 +9,7 @@ def test_fisic_person_creator_view():
     fake_person_info = {
         "faturamento": 10000.0,
         "idade": 30,
-        "nome_fantasia": "Adalberto Ferragens",
+        "nome_fantasia": "Adalberto",
         "email_corporativo": "Adalb@email.com",
         "celular": "11999999999",
         "categoria": "A",
@@ -20,7 +20,7 @@ def test_fisic_person_creator_view():
         "id": 1, 
         "faturamento": 10000.0,
         "idade": 30,
-        "nome_fantasia": "Adalberto Ferragens",
+        "nome_fantasia": "Adalberto",
         "email_corporativo": "Adalb@email.com",
         "celular": "11999999999",
         "categoria": "A",

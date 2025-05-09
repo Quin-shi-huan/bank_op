@@ -15,7 +15,7 @@ def test_fisic_person_finder_view():
             "attributes": {
                 "renda_mensal": 5000.0,
                 "idade": 30,
-                "nome_completo": "João da Silva",
+                "nome_completo": "João",
                 "celular": "11999999999",
                 "email": "joao@email.com",
                 "categoria": "Premium",

@@ -15,7 +15,7 @@ def test_fisic_person_finder_view():
             "attributes": {
                 "faturamento": 10000.0,
                 "idade": 30,
-                "nome_fantaisa": "Adalberto Ferragens",
+                "nome_fantaisa": "Adalberto",
                 "celular": "1199008855",
                 "email": "Adalb@email.com",
                 "categoria": "Premium",
