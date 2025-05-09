@@ -42,7 +42,7 @@ class PersonCreatorController(PersonCreatorControllerInterface):
     def __format_response(self, person_info: Dict) -> Dict:
         return {
             "data": {
-                "type": "Person",
+                "type": "Fisic Person",
                 "count": 1,
                 "attributes": person_info
             }

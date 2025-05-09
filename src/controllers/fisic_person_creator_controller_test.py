@@ -19,7 +19,7 @@ def test_create():
     controller = PersonCreatorController(MockFisicPersonRepository())
     response = controller.create(person_info)
 
-    assert response["data"]["type"] == "Person"
+    assert response["data"]["type"] == "Fisic Person"
     assert response["data"]["count"] == 1
     assert response["data"]["attributes"] == person_info
 
