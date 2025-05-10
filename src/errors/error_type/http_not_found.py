@@ -3,4 +3,4 @@ class HttpNotFoundError(Exception):
         super().__init__(message)
         self.status_code = 404
         self.name = "NotFound"
-        self.messag = message
+        self.message = message
