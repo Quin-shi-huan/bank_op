@@ -24,7 +24,6 @@ class FisicPersonFinderController(PersonFinderControllerInterface):
         return {
             "data": {
                 "type": "Fisic Person",
-                "count": 1,
                 "attributes": {
                     "renda_mensal": fisic_person.renda_mensal,
                     "idade": fisic_person.idade,

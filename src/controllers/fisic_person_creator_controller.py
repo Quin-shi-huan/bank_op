@@ -44,7 +44,6 @@ class FisicPersonCreatorController(PersonCreatorControllerInterface):
         return {
             "data": {
                 "type": "Fisic Person",
-                "count": 1,
                 "attributes": person_info
             }
         }

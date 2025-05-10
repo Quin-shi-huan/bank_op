@@ -24,7 +24,6 @@ class JuridicPersonFinderController(PersonFinderControllerInterface):
         return {
             "data": {
                 "type": "Juridic Person",
-                "count": 1,
                 "attributes": {
                     "faturamento": juridic_person.faturamento,
                     "idade": juridic_person.idade,

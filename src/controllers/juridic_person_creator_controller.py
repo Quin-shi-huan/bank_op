@@ -43,7 +43,6 @@ class JuridicPersonCreatorController(PersonCreatorControllerInterface):
         return {
             "data": {
                 "type": "Juridic Person",
-                "count": 1,
                 "attributes": person_info
             }
         }
