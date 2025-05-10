@@ -8,7 +8,7 @@ def juridic_person_creator_validator(http_request: HttpRequest) -> None:
         faturamento: float
         idade: int
         nome_fantasia: constr(min_length=1)
-        celular: constr(min_length=11)
+        celular: constr(min_length=1)
         email_corporativo: constr(min_length=1)
         categoria: constr(min_length=1)
         saldo: float
@@ -16,4 +16,4 @@ def juridic_person_creator_validator(http_request: HttpRequest) -> None:
     try:
         BodyData(**http_request.body)
     except ValidationError as e:
-        raise HttpUnprocessableEntityError(e.erros()) from e
+        raise HttpUnprocessableEntityError(e.errors()) from e
